@@ -26,7 +26,7 @@ shinyUI(
 				,label='Color'
 				,choices=palette()
 				)
-			,h3('Documentation:')
+			,h3('Usage Notes:')
 			,p(
 				"This project uses the `mtcars` dataset to plot the",
 				"regression model using two variables of this dataset:",
@@ -46,7 +46,7 @@ shinyUI(
 					,style="color:#ff6600;margin:-65px 0px 10px 20px;"
 					)
 				)
-			,h4('Summary of Selected Attribute')
+			,h4('Summary of Selected Variable')
 			,h4(verbatimTextOutput("summary"))
 			,h4(textOutput('text'))
 			,plotOutput('myPlot')
