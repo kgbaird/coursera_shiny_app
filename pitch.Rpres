@@ -1,0 +1,33 @@
+Visualizing Simple Linear Regression
+============================================
+author: Kyle Baird
+
+What is Simple Linear Regression?
+============================================
+Simple Linear Regression is a statistical analysis that relates two variables by fitting a straight line through the data points of the two variables
+  * Uses:
+    * Find the correlation between two variables
+	* Determine if changes in one variable will affect the other and in what way
+[Wikipedia page](http://en.wikipedia.org/wiki/Simple_linear_regression)
+
+The Source Data
+============================================
+The app uses the `mtcars` data set from the base R library.  The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973 and 74 models).
+Example Usage:
+```{r}
+require(graphics)
+pairs(mtcars, main = "mtcars data")
+coplot(mpg ~ disp | as.factor(cyl), data = mtcars,
+       panel = panel.smooth, rows = 1)
+```
+More information can be found [here](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html)
+
+Simple Linear Regression in R
+============================================
+R provides the [lm](https://stat.ethz.ch/R-manual/R-patched/library/stats/html/lm.html) function to perform simple linear regression
+
+This function makes fitting linear models easy.
+
+Learn more about Simple Linear Regression
+============================================
+There is an application that can be found [here](https://kgbaird.shinyapps.io/coursera_shiny_app/) to help you explore more about Simple Linear Regression
